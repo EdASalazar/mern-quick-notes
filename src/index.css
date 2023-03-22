@@ -1,7 +1,7 @@
 /* CSS Custom Properties */
 :root {
-  --white: #cccccc;
-  --tan-1: #797978;
+  --white: #ebebeb;
+  --tan-1: #b0b0b0;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
   --tan-4: #D3C1AE;
@@ -152,9 +152,16 @@ button[type="submit"] {
   margin: 1vmin 0 0;
 }
 
-nav {
-  background-color: lightblue;
-  margin-top: 0;
-  padding: 5vm;
+main {
   width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+nav {
+  width: 100vw;
+  background-color: rgb(107, 194, 244);
+  margin: 0;
+  padding: 2vw;
+  
 }
