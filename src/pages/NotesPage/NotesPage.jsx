@@ -1,15 +1,13 @@
 import NoteItemPage from "../NoteItemPage/NoteItemPage";
 
 export default function NotesPage({ notes, user }) {
-// const NoteItem = notes.map((note, idx) => (
-//   <NoteItem note={note} text={note.text} key={idx} index={idx} />
-// ));
-
+  // const NoteText = notes.maps(note => <NoteItemPage text={note.text} /> );
+  
 
   return (
     <>
       <h1>NotesPage</h1>
-      <NoteItemPage />
+       {/* {NoteText} */}
     </>
   );
 }
