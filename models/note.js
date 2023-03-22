@@ -10,7 +10,7 @@ const noteSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    // will swithc to true after seeding
+    // will switch to true after seeding
     required: false,
   },
 
