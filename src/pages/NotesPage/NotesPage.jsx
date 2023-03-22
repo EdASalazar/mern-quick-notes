@@ -1,8 +1,13 @@
 import NoteItemPage from "../NoteItemPage/NoteItemPage";
 
 export default function NotesPage({ notes, user }) {
-  // const NoteText = notes.maps(note => <NoteItemPage text={note.text} /> );
-  
+  // const NoteText = notes.map((n, idx) => (
+  //   <NoteItemPage
+  //     index={idx}
+  //     text={n.text}
+  //     key={idx}
+  //   />
+  // ));
 
   return (
     <>

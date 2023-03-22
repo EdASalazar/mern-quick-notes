@@ -13,9 +13,9 @@ export default function App() {
 // not sure how to get that just yet 
 
   const [notes, setNotes] = useState([
-    { text: "A note", user: {user}},
-    { text: "B note", user: {user}},
-    { text: "C note", user: {user}}
+    { text: "A note", user: null},
+    { text: "B note", user: null},
+    { text: "C note", user: null}
   ])
 
   function addNote(newNote) {
