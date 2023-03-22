@@ -6,12 +6,11 @@ const Note = require("./models/note")
 (async function(){
   await Note.deleteMany({});
   const notes = await Note.create([
-    {text: "A doe", user: null},
-    {text: "A deer", user: null},
-    {text: "a female", user: null},
-    {text: "Deer", user: null}
+    {text: "A doe"},
+    {text: "A deer"},
+    {text: "a female"},
+    {text: "Deer"}
   ]);
   console.log(items)
-
   process.exit();
 })

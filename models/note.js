@@ -10,7 +10,8 @@ const noteSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    required: true,
+    // will swithc to true after seeding
+    required: false,
   },
 
 }, {
