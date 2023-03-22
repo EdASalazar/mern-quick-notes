@@ -1,13 +1,13 @@
 /* CSS Custom Properties */
 :root {
   --white: #ebebeb;
-  --tan-1: #b0b0b0;
-  --tan-2: #E7E2DD;
+  --tan-1: #d6d1d1;
+  --tan-2: #f1ea9c;
   --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --tan-4: #aeced3;
+  --orange: #678c24;
+  --text-light: #0c0c0c;
+  --text-dark: #000000;
 }
 
 *, *:before, *:after {
