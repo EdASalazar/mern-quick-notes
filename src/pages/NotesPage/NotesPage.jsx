@@ -1,4 +1,4 @@
-export default function NotesPage() {
+export default function NotesPage({ notes }) {
 
   return (
     <>

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const user = require('./user');
 
 const noteSchema = new Schema({
-  name: {
+  text: {
     type: String,
     required: true,
   },
