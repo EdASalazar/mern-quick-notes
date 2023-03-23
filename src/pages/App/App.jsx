@@ -22,9 +22,17 @@ export default function App() {
   //   getItems();
   // }, []);
 
+// useEffect(function() {
+//     async function getNotes() {
+//       const notes = await notesAPI.getAll();
+//       setNotes(notes);
+//     }
+//     getNotes();
+// }, []);
+
 useEffect(function() {
     async function getNotes() {
-      const notes = await notesAPI.getAll();
+      const notes = await notes.notesAPI.getById()
       setNotes(notes);
     }
     getNotes();

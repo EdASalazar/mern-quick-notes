@@ -1,4 +1,3 @@
-import NewNotePage from "../NewNotePage/NewNotePage";
 import NoteItemPage from "../NoteItemPage/NoteItemPage";
 
 

@@ -5,6 +5,7 @@ const Note = require('../../models/note')
 module.exports = {
   create,
   index,
+  userIndex
 };
 
 async function create(req, res) {
@@ -19,6 +20,12 @@ async function create(req, res) {
 
 async function index(req, res) {
   const notes = await Note.find({}).sort('createdAt').exec();
+  res.json(notes);
+  console.log(notes)
+}
+
+async function userIndex(req, res) {
+  const notes = await Note.findById(req.params.id)
   res.json(notes);
   console.log(notes)
 }
