@@ -25,7 +25,7 @@ async function index(req, res) {
 }
 
 async function userIndex(req, res) {
-  const notes = await Note.findById(req.params.id)
+  const notes = await Note.find(req.params.id)
   res.json(notes);
   console.log(notes)
 }
