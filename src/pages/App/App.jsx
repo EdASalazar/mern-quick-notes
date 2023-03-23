@@ -11,16 +11,25 @@ import * as notesAPI from '../../utilities/notes-api'
 export default function App() {
   const [user, setUser] = useState(getUser());
 
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState([]);
 
   // function addNote(newNote) {
   //   setNotes([...notes, newNote]);
   // }
 
-async function addNote(note) {
-  const newNote = await notesAPI.create(note);
-  setNotes([...notes, newNote])
-}
+  useEffect(function() {
+    async function getItems() {
+      const notesData = await notesAPI.getById(user._id)
+      console.log(notesData)
+      setNotes(notesData)
+    }
+    getItems();
+  }, []);
+
+  async function addNote(note) {
+    const newNote = await notesAPI.create(note);
+    setNotes([...notes, newNote])
+  };
 
 
 
@@ -33,7 +42,7 @@ async function addNote(note) {
             <Routes>
               {/* Route components in here */}
               <Route path="/notes/new" element={<NewNotePage notes={notes} addNote={addNote}/>} />
-              <Route path="/notes" element={<NotesPage notes={notes} user={user}/>} />
+              <Route path="/notes" element={<NotesPage notes={notes} user={user} addNote={addNote}/>} />
             </Routes>
           </>
           :

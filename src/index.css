@@ -183,6 +183,11 @@ nav {
   align-items: center !important;
 }
 
+#NoteForm > input {
+  width: 40vw;
+
+}
+
 button {
-  width: 10%;
+  width: 20vw;
 }
