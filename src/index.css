@@ -165,3 +165,24 @@ nav {
   padding: 2vw;
   
 }
+
+.NewNotePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#NoteForm {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: auto;
+  font-size: 5vw !important;
+  align-items: center !important;
+}
+
+button {
+  width: 10%;
+}

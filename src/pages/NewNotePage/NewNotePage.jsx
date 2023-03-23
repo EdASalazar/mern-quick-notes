@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { create } from '../../utilities/notes-services'
+
 
 
 export default function NewNotePage({ addNote }) {
@@ -10,20 +10,25 @@ export default function NewNotePage({ addNote }) {
   
   }
 
-  async function handleSubmit(evt) {
-    evt.preventDefault();
-    try {
-    const note = await create(newNote);
-    } catch {
-      console.log('Error making note')
-    }
-  }  
+  // async function handleSubmit(evt) {
+  //   evt.preventDefault();
+  //   try {
+  //   const note = await create(newNote);
+  //   } catch {
+  //     console.log('Error making note')
+  //   }
+  // }  
 
+function handleSubmit(evt) {
+  evt.preventDefault();
+  addNote(newNote);
+  setNewNote({text: ""});
+}
 
   return (
     <div className="NewNotePage">
       <h2>Add A New Note</h2>
-      <form onSubmit={handleSubmit}>
+      <form id="NoteForm" className="NewNotwFrom" onSubmit={handleSubmit}>
         <input type="text" 
         name="text" 
         placeholder="New Note..." 
