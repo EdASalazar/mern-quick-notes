@@ -2,11 +2,11 @@ import NewNotePage from "../NewNotePage/NewNotePage";
 import NoteItemPage from "../NoteItemPage/NoteItemPage";
 
 
-export default function NotesPage({ notes, user }) {
+export default function NotesPage({ notes, user, addNote }) {
   const singleNote = notes.map((note, idx) => 
   <NoteItemPage 
   text={note.text} 
-  date={note.createdAt} 
+  date={note.createdAt.toLocaleString()} 
   />);
 
   return (
@@ -15,7 +15,6 @@ export default function NotesPage({ notes, user }) {
       <ul className="NotePageList">
         {singleNote}
       </ul>
-      <NewNotePage />
     </div>
   );
 }

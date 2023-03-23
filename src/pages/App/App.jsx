@@ -45,7 +45,7 @@ useEffect(function() {
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />
-        
+            <NewNotePage notes={notes} addNote={addNote}/>
             <Routes>
               {/* Route components in here */}
               <Route path="/notes/new" element={<NewNotePage notes={notes} addNote={addNote}/>} />

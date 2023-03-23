@@ -10,14 +10,6 @@ export default function NewNotePage({ addNote }) {
   
   }
 
-  // async function handleSubmit(evt) {
-  //   evt.preventDefault();
-  //   try {
-  //   const note = await create(newNote);
-  //   } catch {
-  //     console.log('Error making note')
-  //   }
-  // }  
 
 function handleSubmit(evt) {
   evt.preventDefault();
