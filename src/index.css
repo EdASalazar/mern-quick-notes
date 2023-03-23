@@ -195,17 +195,25 @@ button {
 .NotePageList {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 70vw;
+  width: 100%;
   margin: 0;
   padding: 0;
-  
   list-style: none;
-
 }
 
 .NotesPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+}
+
+.NoteItemPage > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border: solid darkgrey .5vw;
+  margin-bottom: 1vw;
 }
