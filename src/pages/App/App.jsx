@@ -13,30 +13,23 @@ export default function App() {
 
   const [notes, setNotes] = useState([]);
 
-  // useEffect(function() {
-  //   async function getItems() {
-  //     const notesData = await notesAPI.getById(user._id)
-  //     console.log(notesData)
-  //     setNotes(notesData)
-  //   }
-  //   getItems();
-  // }, []);
 
-// useEffect(function() {
-//     async function getNotes() {
-//       const notes = await notesAPI.getAll();
-//       setNotes(notes);
-//     }
-//     getNotes();
-// }, []);
 
 useEffect(function() {
     async function getNotes() {
-      const notes = await notes.notesAPI.getById()
+      const notes = await notesAPI.getAll();
       setNotes(notes);
     }
     getNotes();
 }, []);
+
+// useEffect(function() {
+//   async function getNotes() {
+//     const notes = await notesAPI.getById();
+//     setNotes(notes);
+//   }
+//   getNotes();
+// }, []);
 
 
 

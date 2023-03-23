@@ -10,5 +10,6 @@ export function getAll() {
 }
 
 export function getById(id) {
+  console.log(id);
   return sendRequest(`${BASE_URL}/${id}`);
 }
