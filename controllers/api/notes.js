@@ -17,11 +17,8 @@ async function create(req, res) {
   }
 }
 
-async function create(req, res) {
-  try { 
-
-  } catch {
-    
-  }
-
+async function index(req, res) {
+  const notes = await Note.find({}).sort('createdAt').exec();
+  res.json(notes);
+  console.log(notes)
 }

@@ -13,18 +13,23 @@ export default function App() {
 
   const [notes, setNotes] = useState([]);
 
-  // function addNote(newNote) {
-  //   setNotes([...notes, newNote]);
-  // }
+  // useEffect(function() {
+  //   async function getItems() {
+  //     const notesData = await notesAPI.getById(user._id)
+  //     console.log(notesData)
+  //     setNotes(notesData)
+  //   }
+  //   getItems();
+  // }, []);
 
-  useEffect(function() {
-    async function getItems() {
-      const notesData = await notesAPI.getById(user._id)
-      console.log(notesData)
-      setNotes(notesData)
+useEffect(function() {
+    async function getNotes() {
+      const notes = await notesAPI.getAll();
+      setNotes(notes);
     }
-    getItems();
-  }, []);
+    getNotes();
+}, []);
+
 
   async function addNote(note) {
     const newNote = await notesAPI.create(note);
