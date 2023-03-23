@@ -1,21 +1,29 @@
 import { useState } from 'react';
+import { create } from '../../utilities/notes-services'
 
-export default function NewNotePage({ addNote, user }) {
-  const [newNote, setNewNote] = useState({text: "", user: {user}})
 
+export default function NewNotePage({ addNote }) {
+  const [newNote, setNewNote] = useState({text: ""});
+  
   function handleChange(evt) {
     setNewNote({...newNote, [evt.target.name]: evt.target.value})
+  
   }
-function handleAddNote(evt) {
-  evt.preventDefault();
-  addNote(newNote)
-  setNewNote({ text: "", user: null })
-}
+
+  async function handleSubmit(evt) {
+    evt.preventDefault();
+    try {
+    const note = await create(newNote);
+    } catch {
+      console.log('Error making note')
+    }
+  }  
+
 
   return (
     <div className="NewNotePage">
       <h2>Add A New Note</h2>
-      <form onSubmit={handleAddNote}>
+      <form onSubmit={handleSubmit}>
         <input type="text" 
         name="text" 
         placeholder="New Note..." 
@@ -24,8 +32,6 @@ function handleAddNote(evt) {
         />
         <button type="submit">Add A Note</button>
       </form>
-
-
     </div>
   );
 }

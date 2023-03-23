@@ -12,11 +12,7 @@ export default function App() {
 // I think it has to be the user Id
 // not sure how to get that just yet 
 
-  const [notes, setNotes] = useState([
-    { text: "A note", user: null},
-    { text: "B note", user: null},
-    { text: "C note", user: null}
-  ])
+  const [notes, setNotes] = useState([])
 
   function addNote(newNote) {
     setNotes([...notes, newNote]);
@@ -31,7 +27,7 @@ export default function App() {
             <NewNotePage />
             <Routes>
               {/* Route components in here */}
-              <Route path="/notes/new" element={<NewNotePage notes={notes} user={user}/>} />
+              <Route path="/notes/new" element={<NewNotePage notes={notes} />} />
               <Route path="/notes" element={<NotesPage notes={notes} addNote={addNote} user={user}/>} />
             </Routes>
           </>

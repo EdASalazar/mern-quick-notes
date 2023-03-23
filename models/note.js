@@ -11,7 +11,7 @@ const noteSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
     // will switch to true after seeding
-    required: false,
+    required: true,
   },
 
 }, {
