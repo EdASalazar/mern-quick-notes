@@ -1,7 +1,7 @@
 import NoteItemPage from "../NoteItemPage/NoteItemPage";
 
 
-export default function NotesPage({ notes, user, addNote }) {
+export default function NotesPage({ notes }) {
   const singleNote = notes.map((note, idx) => 
   <NoteItemPage 
   text={note.text} 
@@ -13,7 +13,7 @@ export default function NotesPage({ notes, user, addNote }) {
     <div className="NotesPage">
       <h1>A Quick Note While He's Away</h1>
       <ul className="NotePageList">
-        {singleNote === [] ? 'No Notes Yet!' : singleNote}
+        {!notes === [] ? 'No Notes Yet!' : singleNote}
       </ul>
     </div>
   );
