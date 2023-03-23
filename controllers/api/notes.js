@@ -19,7 +19,7 @@ async function create(req, res) {
 }
 
 async function index(req, res) {
-  const notes = await Note.find({}).sort('createdAt').exec();
+  const notes = await Note.find({user: req.user._id}).sort('createdAt').exec();
   res.json(notes);
   console.log(notes)
 }

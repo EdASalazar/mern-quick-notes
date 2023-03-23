@@ -23,15 +23,15 @@ useEffect(function() {
     getNotes();
 }, []);
 
-useEffect(function() {
-  const userId = user._id;
-  console.log("userId on App.js", userId)
-  async function getNotes() {
-    const notes = await notesAPI.getById(userId);
-    setNotes(notes);
-  }
-  getNotes();
-}, []);
+// useEffect(function() {
+//   const userId = user._id;
+//   console.log("userId on App.js", userId)
+//   async function getNotes() {
+//     const notes = await notesAPI.getById(userId);
+//     setNotes(notes);
+//   }
+//   getNotes();
+// }, []);
 
 
   async function addNote(note) {

@@ -10,6 +10,6 @@ export function getAll() {
 }
 
 export function getById(id) {
-  console.log("userId in the api.js", id);
+  console.log("userId in the api.js",id);
   return sendRequest(`${BASE_URL}/${id}`, 'GET', id );
 }
