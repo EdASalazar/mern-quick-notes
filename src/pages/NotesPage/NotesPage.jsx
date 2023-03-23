@@ -1,3 +1,4 @@
+import NewNotePage from "../NewNotePage/NewNotePage";
 import NoteItemPage from "../NoteItemPage/NoteItemPage";
 
 
@@ -9,11 +10,12 @@ export default function NotesPage({ notes, user }) {
   />);
 
   return (
-    <>
+    <div className="NotesPage">
       <h1>A Quick Note While He's Away</h1>
-      <ul>
+      <ul className="NotePageList">
         {singleNote}
       </ul>
-    </>
+      <NewNotePage />
+    </div>
   );
 }

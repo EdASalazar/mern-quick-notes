@@ -4,7 +4,7 @@ export default function NoteItemPage({date, text}){
 
   return (
     <div className="NoteItemPage">
-        <li>
+        <li className="NoteItemListItem">
           {text} {date}
         </li>
     </div>

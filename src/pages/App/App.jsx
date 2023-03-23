@@ -31,6 +31,8 @@ useEffect(function() {
 }, []);
 
 
+
+
   async function addNote(note) {
     const newNote = await notesAPI.create(note);
     setNotes([...notes, newNote])

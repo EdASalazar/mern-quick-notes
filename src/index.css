@@ -191,3 +191,21 @@ nav {
 button {
   width: 20vw;
 }
+
+.NotePageList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70vw;
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+
+}
+
+.NotesPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
