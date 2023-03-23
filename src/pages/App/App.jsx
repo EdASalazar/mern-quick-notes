@@ -16,6 +16,8 @@ export default function App() {
 
 
 useEffect(function() {
+  const userId = user._id;
+  console.log(userId)
     async function getNotes() {
       const notes = await notesAPI.getAll();
       setNotes(notes);
