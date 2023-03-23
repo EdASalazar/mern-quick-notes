@@ -1,11 +1,12 @@
 import NewNotePage from "../NewNotePage/NewNotePage";
 
-export default function NoteItemPage({index, text}){
+export default function NoteItemPage({date, text}){
 
   return (
     <div className="NoteItemPage">
-      <h4>Note Item Page</h4>
-        
+        <li>
+          {text} {date}
+        </li>
     </div>
   )
 } 
