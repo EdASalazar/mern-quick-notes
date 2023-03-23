@@ -19,7 +19,6 @@ function handleSubmit(evt) {
 
   return (
     <div className="NewNotePage">
-      <h2>Add A New Note</h2>
       <form id="NoteForm" className="NewNotwFrom" onSubmit={handleSubmit}>
         <input type="text" 
         name="text" 

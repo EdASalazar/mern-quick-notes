@@ -6,7 +6,7 @@ export default function NotesPage({ notes, user, addNote }) {
   const singleNote = notes.map((note, idx) => 
   <NoteItemPage 
   text={note.text} 
-  date={note.createdAt.toLocaleString()} 
+  date={note.createdAt} 
   />);
 
   return (
