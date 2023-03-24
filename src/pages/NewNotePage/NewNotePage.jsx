@@ -6,10 +6,8 @@ export default function NewNotePage({ addNote }) {
   const [newNote, setNewNote] = useState({text: ""});
   
   function handleChange(evt) {
-    setNewNote({...newNote, [evt.target.name]: evt.target.value})
-  
+    setNewNote({...newNote, [evt.target.name]: evt.target.value})  
   }
-
 
 function handleSubmit(evt) {
   evt.preventDefault();

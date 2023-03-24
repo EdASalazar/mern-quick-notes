@@ -13,7 +13,7 @@ export default function NotesPage({ notes }) {
     <div className="NotesPage">
       <h1>A Quick Note While He's Away</h1>
       <ul className="NotePageList">
-        {!notes === [] ? 'No Notes Yet!' : singleNote}
+        {notes.length === 0 ? 'No Notes Yet!' : singleNote}
       </ul>
     </div>
   );
