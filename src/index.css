@@ -185,12 +185,16 @@ nav {
 
 #NoteForm > input {
   width: 40vw;
-
+  height: 5vw;
+  font-size: 4vw;
+  margin-top: 1vw;
 }
 
-button {
-  width: 20vw;
+#NoteForm > button {
+  height: 5vw;
+  font-size: 3vw;
 }
+
 
 .NotePageList {
   display: flex;
@@ -210,10 +214,17 @@ button {
 
 .NoteItemPage > li {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between !important;
-  width: 100%;
+  justify-content: space-between;
+  width: 50%;
   border: solid darkgrey .5vw;
   margin-bottom: 1vw;
+  margin: 0;
+  padding: 1vw;
+}
+
+.NoteItemPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
